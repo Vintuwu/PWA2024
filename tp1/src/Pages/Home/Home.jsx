@@ -1,9 +1,9 @@
 import Title from "../../Components/Title/Title";
 import logo from "../../logo.svg";
-//import Button from "../../Components/Button/Button";
-//import Tarea from "../../Components/Tarea/Tarea";
+import Button from "../../Components/Button/Button";
+import Tarea from "../../Components/Tarea/Tarea";
 import Input from "../../Components/Input/Input";
-//import style from "./Home.module.css";
+import style from "./Home.module.css";
 import { useState } from "react";
 
 const Home = () => {
@@ -19,6 +19,7 @@ const Home = () => {
             <img src={logo} className="App-logo" alt="logo" />
             <Title texto="Lista de quehaceres"/>
             <Input tipo="text" value={valueInput1} placeholder="Buscar tareas" onChangeHandler={onChangeHandler}/>
+            <Tarea/>
         </div>
     )
 }
