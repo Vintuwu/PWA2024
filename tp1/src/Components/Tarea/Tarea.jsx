@@ -1,9 +1,9 @@
 import React, { useState, useEffect} from 'react';
 import Input from "../Input/Input";
 
-export default function Tarea({countTareas}) {
+export default function Tarea({filtro, countTareas}) {
     const [tareas, setTareas] = useState([{id: 1, descripcion: "Despertar", completado: false}, {id:2, descripcion:"Lavarse los dientes", completado:false}]);
-    useEffect(() => {countTareas(tareas.length);}, [tareas, countTareas]);
+    
 
     const modificarEstado = (id) => {
         const nuevaTareas = tareas.map(tarea => {
@@ -15,13 +15,24 @@ export default function Tarea({countTareas}) {
         setTareas(nuevaTareas);
     };
 
+    var tareasFiltradas = Array();
+    if (filtro != undefined) {
+        tareas.forEach(tarea => { 
+            if (tarea.descripcion.toLowerCase().includes(filtro.toLowerCase())) {
+                tareasFiltradas = tareasFiltradas.concat(tarea);
+            }
+        });
+    } else {
+        tareasFiltradas = tareas;
+    }
+    useEffect(() => {countTareas(tareasFiltradas.length);}, [tareasFiltradas, countTareas]);
     return (
         <div>
             <div>
                 <Input/>
             </div>
             <ul>
-                {tareas.map((tarea) => (
+                {tareasFiltradas.map((tarea) => (
                     <li key={tarea.id}>
                         <input 
                             type="checkbox"
