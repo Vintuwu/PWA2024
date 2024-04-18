@@ -1,22 +1,33 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react';
+import Input from "../Input/Input";
 
-export default function Tarea(){
-    const [tarea, setTareas] = useState([{id: 1, descripcion: "Despertar", completado: false}])
-}
-const [nuevaTarea, setNuevaTarea] = useState('');
+export default function Tarea() {
+    const [tareas, setTareas] = useState([{id: 1, descripcion: "Despertar", completado: false}, {id:2, descripcion:"Lavarse los dientes", completado:false}])
 
-const handleCambiarNuevaTarea = (event) => {
-    setNuevaTarea(event.target.value);
-}
-
-const handleAniadirTarea = () => {
-    if (nuevaTarea.trim() !== ''){
-        const nuevaTarea = {
-            id: tarea.length+1,
-            descripcion: nuevaTarea,
-            completado: false
-        }
-        setTareas([...task, nuevaTarea]);
-        setNuevaTarea('');
-    }
+    return (
+        <div>
+            <div>
+                <Input/>
+            </div>
+            <ul>
+                {tareas.map((tarea) => (
+                    <li key={tarea.id}>
+                        <input 
+                            type="checkbox"
+                            checked={tarea.completado}
+                        />
+                        <input
+                            type="text"
+                            value={tarea.id}
+                            readOnly
+                        />
+                        <input 
+                            type="text"
+                            value={tarea.descripcion}
+                        />
+                    </li>
+                ))}
+            </ul>
+        </div>
+    )
 }
