@@ -1,3 +1,4 @@
+import Button from "../Button/Button";
 import style from "./Input.module.css";
 const Input = ({ tipo, value, placeholder, onChangeHandler }) => {
     return <input

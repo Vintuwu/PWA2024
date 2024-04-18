@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import Input from "../Input/Input";
+import Button from "../Button/Button";
 
 export default function Tarea({countTareas}) {
     const [tareas, setTareas] = useState([{id: 1, descripcion: "Despertar", completado: false}, {id:2, descripcion:"Lavarse los dientes", completado:false}]);
@@ -15,11 +16,13 @@ export default function Tarea({countTareas}) {
         setTareas(nuevaTareas);
     };
 
+    const eliminarTarea = (id) => {
+        const tareaEliminada = tareas.filter(tarea => tarea.id !== id);
+        setTareas(tareaEliminada);
+    }
+
     return (
         <div>
-            <div>
-                <Input/>
-            </div>
             <ul>
                 {tareas.map((tarea) => (
                     <li key={tarea.id}>
@@ -38,6 +41,7 @@ export default function Tarea({countTareas}) {
                             value={tarea.descripcion}
                             readOnly
                         />
+                        <Button text="Eliminar" onClick={ () => eliminarTarea(tarea.id)} />
                     </li>
                 ))}
             </ul>
