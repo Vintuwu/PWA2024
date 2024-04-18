@@ -7,25 +7,20 @@ import style from "./Home.module.css";
 import { useState } from "react";
 
 const Home = () => {
-    const [valueInput1, setValueInput1] = useState("");
+    const [valueInputBuscador, setValueInputBuscador] = useState("");
     const [numeroTareas, setNumeroTareas] = useState(0);
     const contarTareas = (cantidad) => {
         setNumeroTareas(cantidad);
     };
-    const onChangeHandler = (event) => {
-        setValueInput1(event.target.value);
-        // actualiza la lista de tareas
+    const onChangeHandlerBuscador = (event) => {
+        setValueInputBuscador(event.target.value);
     };
-
-    
-    
     
     return (
         <div className="style.container">
-            <img src={logo} className="App-logo" alt="logo" />
             <Title texto="Lista de quehaceres"/>
-            <Input tipo="text" value={valueInput1} placeholder="Buscar tareas" onChangeHandler={onChangeHandler}/>
-            <Tarea filtro={valueInput1} countTareas={contarTareas}/>
+            <Input tipo="text" value={valueInputBuscador} placeholder="Buscar tareas" onChangeHandler={onChangeHandlerBuscador}/>
+            <Tarea filtro={valueInputBuscador} countTareas={contarTareas}/>
             <p>Total de tareas: {numeroTareas}</p>
         </div>
     );
