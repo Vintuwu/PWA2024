@@ -3,7 +3,7 @@ import Input from "../Input/Input";
 
 export default function Tarea({filtro, countTareas}) {
     const [tareas, setTareas] = useState([{id: 1, descripcion: "Despertar", completado: false}, {id:2, descripcion:"Lavarse los dientes", completado:false}]);
-    
+    const [nuevaTareaDescripcion, setNuevaTareaDescripcion] = useState('');
 
     const modificarEstado = (id) => {
         const nuevaTareas = tareas.map(tarea => {
@@ -14,6 +14,16 @@ export default function Tarea({filtro, countTareas}) {
         });
         setTareas(nuevaTareas);
     };
+
+    const agregarTarea = () => {
+        const nuevaTarea = {
+            id: tareas.length+1,
+            descripcion: nuevaTareaDescripcion,
+            completado: false
+        }
+        setTareas([...tareas, nuevaTarea]);
+        setNuevaTareaDescripcion('');
+    }
 
     var tareasFiltradas = Array();
     if (filtro != undefined) {
@@ -29,7 +39,14 @@ export default function Tarea({filtro, countTareas}) {
     return (
         <div>
             <div>
-                <Input/>
+                <br/>
+                <Input
+                    tipo="text"
+                    value={nuevaTareaDescripcion}
+                    placeholder="Agregar nueva tarea"
+                    onChangeHandler={(e) => setNuevaTareaDescripcion(e.target.value)}
+                />
+                <button onClick={agregarTarea}>Agregar tarea</button>
             </div>
             <ul>
                 {tareasFiltradas.map((tarea) => (
