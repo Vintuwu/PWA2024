@@ -1,8 +1,10 @@
-import React, {useState} from 'react'
-import style from  "./Title.module.css";    
+import React from 'react';
+import style from  "./Title.module.css"; 
 
-export default function Title(texto){
-    return (
-        <h1>texto</h1>
-    )
-}
+const Titulo = ({ texto }) => {
+    return (<h1 className='titulo'>{texto}</h1>);
+};
+
+export default Titulo;
+    o;
+    
