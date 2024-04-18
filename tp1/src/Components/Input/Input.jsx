@@ -1,10 +1,12 @@
-import React, {useState} from 'react';
-export default function Input () {
-    const [nombre, setNombre] = useState('')
-    return (
-        <input
-            value={nombre} 
-            onChange={e => setNombre(e.target.value)}
-        />
-    )
-}
+import style from "./Input.module.css";
+const Input = ({ tipo, value, placeholder, onChangeHandler }) => {
+    return <input
+                className={style.buscador}
+                type={tipo}
+                value={value}
+                placeholder={placeholder}
+                onChange={onChangeHandler} 
+            />;
+  };
+  
+export default Input;
