@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import Input from "../Input/Input";
 
-export default function Tarea() {
-    const [tareas, setTareas] = useState([{id: 1, descripcion: "Despertar", completado: false}, {id:2, descripcion:"Lavarse los dientes", completado:false}])
-
+export default function Tarea({countTareas}) {
+    const [tareas, setTareas] = useState([{id: 1, descripcion: "Despertar", completado: false}, {id:2, descripcion:"Lavarse los dientes", completado:false}]);
+    useEffect(() => {countTareas(tareas.length);}, [tareas, countTareas]);
     return (
         <div>
             <div>
