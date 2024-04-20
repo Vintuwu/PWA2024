@@ -17,7 +17,7 @@ const Home = () => {
     };
     
     return (
-        <div className="style.container">
+        <div className="col-6">
             <Title texto="Lista de quehaceres"/>
             <Input tipo="text" value={valueInputBuscador} placeholder="Buscar tareas" onChangeHandler={onChangeHandlerBuscador}/>
             <Tarea filtro={valueInputBuscador} countTareas={contarTareas}/>

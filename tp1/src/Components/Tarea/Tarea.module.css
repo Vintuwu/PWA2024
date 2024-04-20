@@ -1,0 +1,19 @@
+ul {
+    list-style: none;
+    padding: 0 !important; 
+}
+li {
+    display: flex;
+    margin-top: 4px;
+    margin-bottom: 0;
+    text-align: left;
+    border-bottom: 2px solid #7F5539;
+    justify-content: space-between;
+}
+button {
+    float: right;
+    height: 40px;
+}
+label {
+    margin-left: 8px;
+}
