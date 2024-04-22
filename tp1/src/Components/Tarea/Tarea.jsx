@@ -4,17 +4,29 @@ import Input from "../Input/Input";
 import Button from "../Button/Button";
 
 export default function Tarea({ filtro, countTareas }) {
-
+  // useStates
   const [tareas, setTareas] = useState(() => {
     const tareasGuardadas = localStorage.getItem('tareas');
     return tareasGuardadas ? JSON.parse(tareasGuardadas) : [];
   });
+
   const [nuevaTareaDescripcion, setNuevaTareaDescripcion] = useState('');
-  const keyDownHandler = (event) => {
-    if (event.key === "Enter") {
-      agregarTarea();
-    }
-  };
+
+  const [tareasCompletadas, setTareasCompletadas] = useState(0);
+  //
+
+  // useEffects
+  useEffect(() => {
+    localStorage.setItem('tareas', JSON.stringify(tareas));
+    setTareasCompletadas(tareas.filter(tarea => tarea.completado).length);
+  }, [tareas]);
+
+  useEffect(() => {
+    countTareas(tareasFiltradas.length);
+  }, [tareasFiltradas, countTareas]);
+  //
+
+  // modificadores
   const agregarTarea = () => {
     const nuevaTarea = {
       id: tareas.length + 1,
@@ -25,9 +37,25 @@ export default function Tarea({ filtro, countTareas }) {
     setNuevaTareaDescripcion("");
   };
 
-  useEffect(() => {
-    localStorage.setItem('tareas', JSON.stringify(tareas));
-  }, [tareas]);
+  //Podria ser handleCheck
+  const modificarEstado = (id) => {
+    const nuevaTareas = tareas.map(tarea => {
+      if (tarea.id === id) {
+        const completado = !tarea.completado;
+        return { ...tarea, completado };
+      }
+      return tarea;
+    });
+    setTareas(nuevaTareas);
+  };
+
+  const eliminarTarea = (id) => {
+    const tareaEliminada = tareas.filter((tarea) => tarea.id !== id);
+    setTareas(tareaEliminada);
+  };
+  //
+
+  // funciones
   var tareasFiltradas = Array();
   if (filtro != undefined) {
     tareas.forEach((tarea) => {
@@ -38,59 +66,55 @@ export default function Tarea({ filtro, countTareas }) {
   } else {
     tareasFiltradas = tareas;
   }
-  useEffect(() => {
-    countTareas(tareasFiltradas.length);
-  }, [tareasFiltradas, countTareas]);
 
-  const modificarEstado = (id) => {
-    const nuevaTareas = tareas.map(tarea => {
-      if (tarea.id === id) {
-        return { ...tarea, completado: !tarea.completado };
-      }
-      return tarea;
-    });
-    setTareas(nuevaTareas);
+  const keyDownHandler = (event) => {
+    if (event.key === "Enter") {
+      agregarTarea();
+    }
   };
-  const eliminarTarea = (id) => {
-    const tareaEliminada = tareas.filter((tarea) => tarea.id !== id);
-    setTareas(tareaEliminada);
-  };
-
+  //
   return (
-    <div>
-      <ul>
-        {tareasFiltradas.map((tarea) => (
-          <li key={tarea.id}>
-            <div className="d-flex justify-content-between">
-              <input
-                type="checkbox"
-                className="form-check-input"
-                checked={tarea.completado}
-                onChange={() => modificarEstado(tarea.id)}
+    <>
+      {tareasFiltradas.length === 0 ? (
+        <div className="d-flex justify-content-between">
+          <p className="m-auto mb-3">No tienes tareas pendientes, estás libre</p>
+        </div>
+      ) : (
+        <ul>
+          {tareasFiltradas.map((tarea) => (
+            <li key={tarea.id}>
+              <div className="d-flex justify-content-between">
+                <input
+                  type="checkbox"
+                  className="form-check-input"
+                  checked={tarea.completado}
+                  onChange={() => modificarEstado(tarea.id)}
+                />
+                <label className={tarea.completado ? style.tachado : ""}>{tarea.descripcion}</label>
+              </div>
+              <Button
+                onClick={() => eliminarTarea(tarea.id)}
+                classNameProp={style.botonEliminar}
+                icon={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26"
+                    height="30"
+                    fill="currentColor"
+                    className="bi bi-x-circle"
+                    viewBox="0 0 16 20"
+                  >
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                  </svg>
+                }
+                tipo={"danger"}
               />
-              <label>{tarea.descripcion}</label>
-            </div>
-            <Button
-              onClick={() => eliminarTarea(tarea.id)}
-              classNameProp={style.botonEliminar}
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="26"
-                  height="30"
-                  fill="currentColor"
-                  className="bi bi-x-circle"
-                  viewBox="0 0 16 20"
-                >
-                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                </svg>
-              }
-              tipo={"danger"}
-            />
-          </li>
-        ))}
-      </ul>
+            </li>
+          ))}
+        </ul>
+      )}
+
       <div className="d-flex w-75 m-auto">
         <Input
           classNameProp="col-10 ps-2"
@@ -118,6 +142,7 @@ export default function Tarea({ filtro, countTareas }) {
           tipo={"success"}
         />
       </div>
-    </div>
+      <p>Tareas completadas: {tareasCompletadas} de {tareas.length}</p>
+    </>
   );
 }

@@ -19,3 +19,7 @@ label {
     padding-left: 6px;
     border-left: 2px solid #7F5539;
 }
+
+.tachado { 
+    text-decoration: line-through; 
+}
