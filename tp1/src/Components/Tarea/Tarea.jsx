@@ -18,6 +18,7 @@ export default function Tarea({ filtro, countTareas }) {
   const agregarTarea = () => {
     const nuevaTarea = {
       id: tareas.length + 1,
+      completado: false,
       descripcion: nuevaTareaDescripcion,
     };
     setTareas([...tareas, nuevaTarea]);
