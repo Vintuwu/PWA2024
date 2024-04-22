@@ -1,6 +1,8 @@
-h1 {
-    background-color: #7F5539;
-    color: #e4e9c5;
+.titulo {
+    background: linear-gradient(180deg, rgba(136,95,78,1) 12%, rgba(75,52,43,1) 95%, rgba(32,19,15,1) 100%);
+    color: #fff;
     width: 100%;
-    padding: 5px 0;
+    border-radius: 25px 25px 0 0;
+    padding: 10px 0;
+    margin: 0 !important;
 }
