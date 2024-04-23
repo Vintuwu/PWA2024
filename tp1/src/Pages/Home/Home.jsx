@@ -23,8 +23,7 @@ const Home = () => {
     <div className={`col-md-6 col-12 rounded-top-5 ${style.contenedor ? style.contenedor : ''}`}>
       <Title texto="Lista de quehaceres" /> 
       <Input tipo="text" classNameProp={"m-2 p-2 w-75"} value={valueInputBuscador} placeholder="Buscar tareas" onChangeHandler={onChangeHandlerBuscador} /> 
-      <Tarea filtro={valueInputBuscador} countTareas={contarTareas} /> 
-      <p>Total de tareas: {numeroTareas}</p> 
+      <Tarea filtro={valueInputBuscador} countTareas={contarTareas} />
     </div> 
   ); 
  

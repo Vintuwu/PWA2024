@@ -33,8 +33,10 @@ export default function Tarea({ filtro, countTareas }) {
       completado: false,
       descripcion: nuevaTareaDescripcion,
     };
-    setTareas([...tareas, nuevaTarea]);
-    setNuevaTareaDescripcion("");
+    if (!nuevaTareaDescripcion == "") {
+      setTareas([...tareas, nuevaTarea]);
+      setNuevaTareaDescripcion("");
+    }
   };
 
   //Podria ser handleCheck
@@ -72,7 +74,6 @@ export default function Tarea({ filtro, countTareas }) {
       agregarTarea();
     }
   };
-  //
   return (
     <>
       {tareasFiltradas.length === 0 ? (
@@ -143,6 +144,7 @@ export default function Tarea({ filtro, countTareas }) {
         />
       </div>
       <p>Tareas completadas: {tareasCompletadas} de {tareas.length}</p>
+      <p>Total de tareas: {tareas.length}</p>
     </>
   );
 }
