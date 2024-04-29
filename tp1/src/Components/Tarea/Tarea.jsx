@@ -3,22 +3,23 @@ import style from "./Tarea.module.css";
 import Input from "../Input/Input";
 import Button from "../Button/Button";
 
+//Si el componente renderiza mas de una tarea o una lista de tareas deberia tener el nombre en plural.
 export default function Tarea({ filtro, countTareas }) {
   // useStates
   const [tareas, setTareas] = useState(() => {
-    const tareasGuardadas = localStorage.getItem('tareas');
+    const tareasGuardadas = localStorage.getItem("tareas");
     return tareasGuardadas ? JSON.parse(tareasGuardadas) : [];
   });
 
-  const [nuevaTareaDescripcion, setNuevaTareaDescripcion] = useState('');
+  const [nuevaTareaDescripcion, setNuevaTareaDescripcion] = useState("");
 
   const [tareasCompletadas, setTareasCompletadas] = useState(0);
   //
 
   // useEffects
   useEffect(() => {
-    localStorage.setItem('tareas', JSON.stringify(tareas));
-    setTareasCompletadas(tareas.filter(tarea => tarea.completado).length);
+    localStorage.setItem("tareas", JSON.stringify(tareas));
+    setTareasCompletadas(tareas.filter((tarea) => tarea.completado).length);
   }, [tareas]);
 
   useEffect(() => {
@@ -41,7 +42,7 @@ export default function Tarea({ filtro, countTareas }) {
 
   //Podria ser handleCheck
   const modificarEstado = (id) => {
-    const nuevaTareas = tareas.map(tarea => {
+    const nuevaTareas = tareas.map((tarea) => {
       if (tarea.id === id) {
         const completado = !tarea.completado;
         return { ...tarea, completado };
@@ -78,11 +79,14 @@ export default function Tarea({ filtro, countTareas }) {
     <>
       {tareasFiltradas.length === 0 ? (
         <div className="d-flex justify-content-between">
-          <p className="m-auto mb-3">No tienes tareas pendientes, estás libre</p>
+          <p className="m-auto mb-3">
+            No tienes tareas pendientes, estás libre
+          </p>
         </div>
       ) : (
         <ul>
           {tareasFiltradas.map((tarea) => (
+            //Esto podria ser un componente aparte
             <li key={tarea.id}>
               <div className="d-flex justify-content-between">
                 <input
@@ -91,7 +95,9 @@ export default function Tarea({ filtro, countTareas }) {
                   checked={tarea.completado}
                   onChange={() => modificarEstado(tarea.id)}
                 />
-                <label className={tarea.completado ? style.tachado : ""}>{tarea.descripcion}</label>
+                <label className={tarea.completado ? style.tachado : ""}>
+                  {tarea.descripcion}
+                </label>
               </div>
               <Button
                 onClick={() => eliminarTarea(tarea.id)}
@@ -112,6 +118,7 @@ export default function Tarea({ filtro, countTareas }) {
                 tipo={"danger"}
               />
             </li>
+            //Fin del componente aparte
           ))}
         </ul>
       )}
@@ -143,7 +150,9 @@ export default function Tarea({ filtro, countTareas }) {
           tipo={"success"}
         />
       </div>
-      <p>Tareas completadas: {tareasCompletadas} de {tareas.length}</p>
+      <p>
+        Tareas completadas: {tareasCompletadas} de {tareas.length}
+      </p>
       <p>Total de tareas: {tareas.length}</p>
     </>
   );
