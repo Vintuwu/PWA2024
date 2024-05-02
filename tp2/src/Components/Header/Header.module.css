@@ -1,0 +1,7 @@
+.navbar {
+  @apply bg-violet-950 flex items-center justify-between w-full fixed top-0 z-10 h-20 p-12 rounded-lg shadow-lg;
+}
+
+.nav_link {
+  @apply mx-4 px-4 py-2 rounded-xl bg-transparent hover:bg-zinc-500 hover:bg-opacity-10 text-gray-50 hover:text-gray-300;
+}

@@ -4,7 +4,7 @@ import movies from "../../mocks/movies.json";
 // Componente CardList que muestra la lista de películas guardadas en el json
 const CardList = ({}) => {
   return (
-    <div className="card-list p-5 grid lg:grid-cols-3 md:grid-cols-2 xs:grid-cols-1 gap-16">
+    <div className="card-list p-5 grid lg:grid-cols-3 md:grid-cols-2 xs:grid-cols-1 gap-16 mt-32">
       {movies.map((movie, index) => (
         <Card key={index} movie={movie} />
       ))}
