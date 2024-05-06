@@ -6,7 +6,11 @@ export default {
     './components/**/*.{html,js}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'footer': '#7581f4',
+      }
+    },
   },
   plugins: [],
 }
