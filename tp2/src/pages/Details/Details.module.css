@@ -1,0 +1,9 @@
+.imagen {
+    @apply object-cover w-full rounded-lg md:w-2/6 sm:w-full;
+}
+.contenedor {
+    @apply flex flex-col rounded-xl md:flex-row shadow-xl shadow-neutral-400/10 bg-neutral-800 lg:mt-36 mb-16 xl:mx-auto p-8 xl:w-5/6 lg:w-full sm:mt-24;
+}
+.contenedor_textos {
+    @apply flex flex-col p-4 leading-normal md:w-4/6 text-gray-300 text-xl gap-1 w-full;
+}

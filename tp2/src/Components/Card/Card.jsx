@@ -1,34 +1,42 @@
 import style from "./Card.module.css";
-
 // Componente Card que muestra la información breve de una película
 const Card = ({ movie }) => {
   return (
-    <div className="flex rounded shadow-lg shadow-gray-200 dark:shadow-gray-900 bg-white dark:bg-gray-800 duration-300 hover:-translate-y-2 relative">
+    <div className="flex rounded-xl shadow-xl hover:shadow-indigo-600/20 bg-neutral-800 duration-300 hover:-translate-y-2 overflow-hidden">
       <figure>
         <img
           src={movie.Poster}
           alt={movie.Title}
-          className="rounded-t h-4/6 w-full object-cover"
+          className="h-4/6 w-full object-cover"
         />
-
-        <figcaption className="p-4 h-2/6">
-          <p className="text-2xl mb-2 font-bold leading-relaxed text-gray-200">
+        <figcaption className="p-4 relative h-2/6">
+          <p className="text-2xl mb-2 font-bold leading-relaxed text-neutral-200">
             {movie.Title} ({movie.Year})
           </p>
-          <p className="text-md font-normal leading-relaxed text-gray-300 pb-10">
+          <div>
+            {movie.Genre.map((genero, index) => (
+              <span
+                key={index}
+                className="inline-block bg-neutral-200 rounded-full px-3 py-1 text-md font-semibold text-neutral-800 mr-2 mb-2"
+              >
+                {genero}
+              </span>
+            ))}
+          </div>
+          <p className="text-md font-normal leading-relaxed text-neutral-300">
             {movie.Plot}
             <br></br>
-            Duración: {movie.Runtime}
+            Actores: {movie.Actors}
             <br></br>
             Director: {movie.Director}
             <br></br>
-            Actores: {movie.Actors}
+            Duración: {movie.Runtime}
             <br></br>
             Rating IMDBb: {movie.imdbRating}
           </p>
           <a
             href={`/details/${movie.id}`}
-            className="flex justify-center align-middle px-3 py-2 text-medium font-medium text-center text-white rounded-lg hover:bg-blue-800 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 absolute bottom-0 left-0 right-0"
+            className="flex justify-center align-middle px-3 py-2 text-medium font-medium text-center text-white rounded-lg hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 bg-blue-800 hover:bg-blue-600 dark:focus:ring-blue-800 w-1/4 absolute bottom-4 right-4"
           >
             Ver más
             <svg

@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import style from "./Details.module.css";
 import React, { useState, useEffect } from "react";
 const Details = () => {
   const { id } = useParams();
@@ -17,35 +18,68 @@ const Details = () => {
 
     fetchMovie();
   }, [id]);
-  
+
   if (!movie) {
-    // esto podria borrarse o ser un mensaje de que no existe una pelicula con ese id de la url
-    return <div>Cargando</div>;
+    return (
+      <div className="min-h-screen flex min-w-screen">
+        <p className="m-auto text-xl">
+          No existe ninguna pelicula con el id N°{id}
+        </p>
+      </div>
+    );
   }
   return (
-    <div className="flex rounded shadow-lg shadow-gray-200 dark:shadow-gray-900 bg-white dark:bg-gray-800 duration-300 hover:-translate-y-2">
-      <figure>
-        <img
-          src={movie.Poster}
-          alt={movie.Title}
-          className="rounded-t h-auto w-full object-cover"
-        />
-
-        <figcaption className="p-4">
-          <p
-            className="text-xl mb-4 font-bold leading-relaxed text-gray-800 dark:text-gray-300"
-            x-text="post.title"
-          >
-            {movie.Title} ({movie.Year})
+    <div className={style.contenedor}>
+      <img
+        src={movie.Poster}
+        alt={movie.Title}
+        className={style.imagen}
+      />
+      <div className={style.contenedor_textos}>
+        <p className="text-4xl mb-4 font-bold leading-relaxed text-gray-100">
+          {movie.Title} ({movie.Year})
+        </p>
+        <hr className="h-px mb-4 bg-gray-500 border-0"></hr>
+        <p>{movie.Plot}</p>
+        <div className="mt-auto gap-2 flex flex-col">
+          <p>
+            <strong>Clasificación cinematográfica de la MPAA: </strong>
+            {movie.Rated}
           </p>
-          <small
-            className="leading-5 text-gray-500 dark:text-gray-400"
-            x-text="post.description"
-          >
-            {movie.Plot}
-          </small>
-        </figcaption>
-      </figure>
+          <p>
+            <strong>Fecha de lanzamiento:</strong> {movie.Released}
+          </p>
+          <p>
+            <strong>Duración:</strong> {movie.Runtime}
+          </p>
+          <p>
+            <strong>Géneros:</strong> {movie.Genre.join(", ")}
+          </p>
+          <p>
+            <strong>Director:</strong> {movie.Director}
+          </p>
+          <p>
+            <strong>Escritor/es:</strong> {movie.Writer}
+          </p>
+          <p>
+            <strong>Actores:</strong> {movie.Actors}
+          </p>
+          <p>
+            <strong>Paises de grabación: </strong> {movie.Country}
+          </p>
+          <p>
+            <strong>Premiaciones: </strong> {movie.Awards}
+          </p>
+          {movie.Ratings.map((rating, index) => (
+            <p key={index}>
+              <strong>{rating.Source}:</strong> {rating.Value}
+            </p>
+          ))}
+          <p>
+            <strong>Ganancias: </strong> {movie.BoxOffice}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

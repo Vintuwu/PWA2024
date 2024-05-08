@@ -1,44 +1,44 @@
 {
-    "Title": "Argentina, 1985",
-    "Year": "2022",
-    "Rated": "R",
-    "Released": "21 Oct 2022",
-    "Runtime": "140 min",
-    "Genre": [
-      "Biografía",
-      "Crimen",
-      "Drama"
+  "Title": "Argentina, 1985",
+  "Year": "2022",
+  "Rated": "R",
+  "Released": "21 Oct 2022",
+  "Runtime": "140 min",
+  "Genre": [
+    "Biografía",
+    "Crimen",
+    "Drama"
   ],
-    "Director": "Santiago Mitre",
-    "Writer": "Santiago Mitre, Mariano Llinás, Martín Mauregui",
-    "Actors": "Ricardo Darín, Gina Mastronicola, Francisco Bertín",
-    "Plot": "Inspirada en la historia real del fiscal Julio Strassera, Luis Moreno Ocampo y su joven equipo jurídico que se atrevieron a acusar, contra viento y marea, a contrarreloj y bajo constante amenaza, a los altos mandos de la sangrienta dictadura militar argentina (1976-1983) en el llamado Juicio a las Juntas de mediados de los años 80. Una batalla de David contra Goliat, con los héroes menos esperados.",
-    "Language": "Español, Inglés",
-    "Country": "Argentina, Reino Unido, Estados Unidos",
-    "Awards": "Nominado a 1 Oscar. 27 victorias y 37 nominaciones en total",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BZTY4ZDJkNTUtMjEwNy00YzFiLWE1NWYtNzAxNDYxNDJkYTlkXkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_.jpg",
-    "Ratings": [
-      {
-        "Source": "Internet Movie Database",
-        "Value": "7.6/10"
-      },
-      {
-        "Source": "Rotten Tomatoes",
-        "Value": "96%"
-      },
-      {
-        "Source": "Metacritic",
-        "Value": "78/100"
-      }
-    ],
-    "Metascore": "78",
-    "imdbRating": "7.6",
-    "imdbVotes": "31,165",
-    "imdbID": "tt15301048",
-    "Type": "movie",
-    "DVD": "21 Oct 2022",
-    "BoxOffice": "N/A",
-    "Production": "N/A",
-    "Website": "N/A",
-    "Response": "True"
-  }
+  "Director": "Santiago Mitre",
+  "Writer": "Santiago Mitre, Mariano Llinás, Martín Mauregui",
+  "Actors": "Ricardo Darín, Gina Mastronicola, Francisco Bertín",
+  "Plot": "Inspirada en la historia real del fiscal Julio Strassera, Luis Moreno Ocampo y su joven equipo jurídico que se atrevieron a acusar, contra viento y marea, a contrarreloj y bajo constante amenaza, a los altos mandos de la sangrienta dictadura militar argentina (1976-1983) en el llamado Juicio a las Juntas de mediados de los años 80. Una batalla de David contra Goliat, con los héroes menos esperados.",
+  "Language": "Español, Inglés",
+  "Country": "Argentina, Reino Unido, Estados Unidos",
+  "Awards": "Nominado a 1 Oscar. 27 victorias y 37 nominaciones en total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BZTY4ZDJkNTUtMjEwNy00YzFiLWE1NWYtNzAxNDYxNDJkYTlkXkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.6/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "96%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "78/100"
+    }
+  ],
+  "Metascore": "78",
+  "imdbRating": "7.6",
+  "imdbVotes": "31,165",
+  "imdbID": "tt15301048",
+  "Type": "movie",
+  "DVD": "21 Oct 2022",
+  "BoxOffice": "N/A",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
+}

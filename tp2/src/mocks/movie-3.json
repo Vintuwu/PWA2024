@@ -1,44 +1,44 @@
 {
-    "Title": "Relatos salvajes",
-    "Year": "2014",
-    "Rated": "R",
-    "Released": "21 Agto 2014",
-    "Runtime": "122 min",
-    "Genre": [
-      "Comedia",
-      "Drama",
-      "Suspenso"
+  "Title": "Relatos salvajes",
+  "Year": "2014",
+  "Rated": "R",
+  "Released": "21 Agto 2014",
+  "Runtime": "122 min",
+  "Genre": [
+    "Comedia",
+    "Drama",
+    "Suspenso"
   ],
-    "Director": "Damián Szifron",
-    "Writer": "Julian Loyola, Damián Szifron, Germán Servidio",
-    "Actors": "Darío Grandinetti, María Marull, Mónica Villa",
-    "Plot": "La película se divide en seis segmentos. (1) \"Pasternak\": Mientras viajan en avión, una modelo y un crítico musical se dan cuenta de que tienen un conocido común llamado Pasternak. Pronto descubren que todos los pasajeros y miembros de la tripulación a bordo conocen a Pasternak. ¿Será una coincidencia? (2) \"Las ratas\": Una camarera reconoce a su cliente: es el usurero que causó una tragedia en su familia. La cocinera sugiere mezclar veneno para ratas con su comida, pero la camarera se niega. La obstinada cocinera, sin embargo, decide seguir adelante con su plan. (3) \"El más fuerte\": Dos conductores en una carretera solitaria tienen una discusión con trágicas consecuencias. (4) \"La pequeña bomba\": Un ingeniero de demoliciones hace que un camión remolque su coche por aparcar en un lugar indebido y tiene una discusión con el empleado de la empresa de grúas. Este suceso destruye su vida privada y profesional, y trama una venganza contra la corrupta empresa de grúas y el ayuntamiento. (5) \"La propuesta\": El imprudente hijo de una familia adinerada tiene un accidente en el que muere una mujer embarazada. Despierta a sus padres y su padre llama al abogado. Los padres proponen pagar al jardinero para que cargue con la culpa del chico. Pronto el padre descubre que es víctima de la extorsión de su abogado y del fiscal encargado de la investigación. ¿Cuál será su decisión? (6) \"Hasta que la muerte nos separe\": Durante la fiesta de bodas, la novia descubre que su recién estrenado marido la ha estado engañando con una de las invitadas, y decide devolvérsela.",
-    "Language": "Español",
-    "Country": "Argentina, España, Francia, Reino Unido",
-    "Awards": "Nominado a 1 Oscar. 49 victorias y 58 nominaciones en total",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BYjIzZmNiZTktZGM5MC00MWNiLTkzZGItNDAyZTU3ZjI5ODdjXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_FMjpg_UX1000_.jpg",
-    "Ratings": [
-      {
-        "Source": "Internet Movie Database",
-        "Value": "8.1/10"
-      },
-      {
-        "Source": "Rotten Tomatoes",
-        "Value": "94%"
-      },
-      {
-        "Source": "Metacritic",
-        "Value": "77/100"
-      }
-    ],
-    "Metascore": "77",
-    "imdbRating": "8.1",
-    "imdbVotes": "215,088",
-    "imdbID": "tt3011894",
-    "Type": "movie",
-    "DVD": "20 Oct 2016",
-    "BoxOffice": "$3,106,530",
-    "Production": "N/A",
-    "Website": "N/A",
-    "Response": "True"
-  }
+  "Director": "Damián Szifron",
+  "Writer": "Julian Loyola, Damián Szifron, Germán Servidio",
+  "Actors": "Darío Grandinetti, María Marull, Mónica Villa",
+  "Plot": "La película se divide en seis segmentos. (1) \"Pasternak\": Mientras viajan en avión, una modelo y un crítico musical se dan cuenta de que tienen un conocido común llamado Pasternak. Pronto descubren que todos los pasajeros y miembros de la tripulación a bordo conocen a Pasternak. ¿Será una coincidencia? (2) \"Las ratas\": Una camarera reconoce a su cliente: es el usurero que causó una tragedia en su familia. La cocinera sugiere mezclar veneno para ratas con su comida, pero la camarera se niega. La obstinada cocinera, sin embargo, decide seguir adelante con su plan. (3) \"El más fuerte\": Dos conductores en una carretera solitaria tienen una discusión con trágicas consecuencias. (4) \"La pequeña bomba\": Un ingeniero de demoliciones hace que un camión remolque su coche por aparcar en un lugar indebido y tiene una discusión con el empleado de la empresa de grúas. Este suceso destruye su vida privada y profesional, y trama una venganza contra la corrupta empresa de grúas y el ayuntamiento. (5) \"La propuesta\": El imprudente hijo de una familia adinerada tiene un accidente en el que muere una mujer embarazada. Despierta a sus padres y su padre llama al abogado. Los padres proponen pagar al jardinero para que cargue con la culpa del chico. Pronto el padre descubre que es víctima de la extorsión de su abogado y del fiscal encargado de la investigación. ¿Cuál será su decisión? (6) \"Hasta que la muerte nos separe\": Durante la fiesta de bodas, la novia descubre que su recién estrenado marido la ha estado engañando con una de las invitadas, y decide devolvérsela.",
+  "Language": "Español",
+  "Country": "Argentina, España, Francia, Reino Unido",
+  "Awards": "Nominado a 1 Oscar. 49 victorias y 58 nominaciones en total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BYjIzZmNiZTktZGM5MC00MWNiLTkzZGItNDAyZTU3ZjI5ODdjXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_FMjpg_UX1000_.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "8.1/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "94%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "77/100"
+    }
+  ],
+  "Metascore": "77",
+  "imdbRating": "8.1",
+  "imdbVotes": "215,088",
+  "imdbID": "tt3011894",
+  "Type": "movie",
+  "DVD": "20 Oct 2016",
+  "BoxOffice": "$3,106,530",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
+}
