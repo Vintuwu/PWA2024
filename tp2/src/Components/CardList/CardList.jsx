@@ -1,10 +1,27 @@
 import Card from '../Card/Card';
-import movies from "../../mocks/movies.json";
+import style from "./CardList.module.css";
+import React, { useState, useEffect } from 'react';
 
 // Componente CardList que muestra la lista de películas guardadas en el json
 const CardList = ({}) => {
+  const [movies, setMovies] = useState([]);
+  const fetchMovies = async () => {
+    try {
+      const response = await fetch(`../src/mocks/movies.json`);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const result = await response.json();
+      setMovies(result);
+    } catch (error) {
+      console.error('Error fetching movies:', error);
+    }
+  }
+  useEffect(() => {
+    fetchMovies();
+  });
   return (
-    <div className="card-list p-5 grid lg:grid-cols-3 md:grid-cols-2 xs:grid-cols-1 gap-16 mt-32">
+    <div className={style.card_list}>
       {movies.map((movie, index) => (
         <Card key={index} movie={movie} />
       ))}
