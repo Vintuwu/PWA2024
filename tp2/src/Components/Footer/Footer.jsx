@@ -4,63 +4,45 @@ import movieIcon from "../../assets/movieIcon.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-violet-950">
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+    <footer>
+      <div className={style.maindiv}>
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <a href="https://flowbite.com/" className="flex items-center">
+            <a href="#">
               <img src={movieIcon} className="h-8 me-3" alt="" />
               <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
-                Peliculas Gucci
+                Peliculas Argentinas
               </span>
             </a>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div className={style.gridcontainer}>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-white">Recursos</h2>
-              <ul className="font-medium">
-                <li className="mb-4">
-                  <a href="#" className="hover:underline text-footer">
-                    Peliculas
-                  </a>
-                </li>
+              <h2 className={style.tituloh2}>Recursos</h2>
+              <ul>
                 <li>
-                  <a href="#" className="hover:underline text-footer">
-                    Login
-                  </a>
+                  <a href="#">Peliculas</a>
                 </li>
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-white">Seguinos</h2>
-              <ul className="font-medium">
-                <li className="mb-4">
-                  <a
-                    href="https://github.com/Vintuwu/PWA2024"
-                    className="hover:underline text-footer"
-                  >
-                    Github
-                  </a>
+              <h2 className={style.tituloh2}>Seguinos</h2>
+              <ul>
+                <li>
+                  <a href="https://github.com/Vintuwu/PWA2024">Github</a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline text-footer">
-                    Discord
-                  </a>
+                  <a href="#">Discord</a>
                 </li>
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-white">Legal</h2>
-              <ul className="font-medium">
-                <li className="mb-4">
-                  <a href="#" className="hover:underline text-footer">
-                    Politicas de Privacidad
-                  </a>
+              <h2 className={style.tituloh2}>Legal</h2>
+              <ul>
+                <li>
+                  <a href="#">Politicas de Privacidad</a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline text-footer">
-                    Terminos y Condiciones
-                  </a>
+                  <a href="#">Terminos y Condiciones</a>
                 </li>
               </ul>
             </div>
@@ -69,16 +51,13 @@ const Footer = () => {
         <hr className="my-6 border-footer lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-white">
-            © 2023{" "}
-            <a href="#" className="hover:underline text-footer">
-              Peliculas Gucci
-            </a>
-            . Todos los Derechos Reservados.
+            © 2023 <a href="#">Peliculas Argentinas</a>. Todos los Derechos
+            Reservados.
           </span>
-          <div className="flex mt-4 sm:justify-center sm:mt-0">
-            <a href="#" className="text-white hover:text-footer">
+          <div className={style.svgcontainer}>
+            <a href="#" className={style.favicon}>
               <svg
-                className="w-4 h-4"
+                className={style.svg}
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -90,11 +69,11 @@ const Footer = () => {
                   clipRule="evenodd"
                 />
               </svg>
-              <span className="sr-only">Facebook page</span>
+              <span className={"sr-only"}>Facebook page</span>
             </a>
-            <a href="#" className="text-white hover:text-footer ms-5">
+            <a href="#" className={style.favicon}>
               <svg
-                className="w-4 h-4"
+                className={style.svg}
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -104,9 +83,9 @@ const Footer = () => {
               </svg>
               <span className="sr-only">Discord community</span>
             </a>
-            <a href="#" className="text-white hover:text-footer ms-5">
+            <a href="#" className={style.favicon}>
               <svg
-                className="w-4 h-4"
+                className={style.svg}
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -120,9 +99,9 @@ const Footer = () => {
               </svg>
               <span className="sr-only">Twitter page</span>
             </a>
-            <a href="#" className="text-white hover:text-footer ms-5">
+            <a href="#" className={style.favicon}>
               <svg
-                className="w-4 h-4"
+                className={style.svg}
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
