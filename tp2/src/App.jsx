@@ -16,9 +16,10 @@ function App() {
   return (
     <>
     <Router>
+      {/* Recibo del Header como prop el input y lo mando como termino de busqueda al home */}
       <Header onInputChange={handleInputChange} />
         <Routes>
-          <Route exact path="/" element={<Home searchTerm={searchTerm} />} />
+          <Route exact path="/" element={/*Aca mando el termino hacia el home*/<Home searchTerm={searchTerm} />} />
           <Route exact path="/details/:id" element={<Details />} />
         </Routes>
       <Footer />

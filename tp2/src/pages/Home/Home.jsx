@@ -1,10 +1,12 @@
+import React from "react";
+import CardList from "../../Components/CardList/CardList";
 
-import CardList from '../../Components/CardList/CardList';
-const Home = () => {
-    return (
-        <div>
-            <CardList/>
-        </div>
-    )
-}
-export default Home
+const Home = ({ searchTerm }) => {
+  return (
+    <div>
+      {/* Mando el termino de busqueda al componente CardList */}
+      <CardList searchTerm={searchTerm} />
+    </div>
+  );
+};
+export default Home;

@@ -1,0 +1,30 @@
+.maindiv {
+    @apply bg-violet-950 mx-auto w-full p-4 py-6 lg:py-8
+}
+.tituloh2 {
+    @apply mb-6 text-sm font-semibold text-white
+}
+a {
+    @apply hover:underline text-footer
+}
+ul {
+    @apply font-medium
+}
+li {
+    @apply mb-4
+}
+.gridcontainer {
+    @apply grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3
+}
+.svgcontainer {
+    @apply flex mt-4 sm:justify-center sm:mt-0
+}
+.svg {
+    @apply w-4 h-4
+}
+.favicon {
+    @apply text-white hover:text-footer ms-5
+}
+.linea {
+    @apply my-6 border-footer lg:my-8
+}
