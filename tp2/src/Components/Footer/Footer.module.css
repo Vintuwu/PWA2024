@@ -4,7 +4,7 @@
 .tituloh2 {
     @apply mb-6 text-sm font-semibold text-white
 }
-a {
+.link {
     @apply hover:underline text-footer
 }
 ul {

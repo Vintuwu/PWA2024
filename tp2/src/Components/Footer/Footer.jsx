@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <footer>
       <div className={style.maindiv}>
-        <div className="md:flex md:justify-between">
+        <div className="md:flex md:justify-between mx-auto max-w-screen-xl">
           <div className="mb-6 md:mb-0">
-            <a href="#">
+            <a className={style.link} href="#">
               <img src={movieIcon} className="h-8 me-3" alt="" />
               <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
                 Peliculas Argentinas
@@ -20,7 +20,7 @@ const Footer = () => {
               <h2 className={style.tituloh2}>Recursos</h2>
               <ul>
                 <li>
-                  <a href="#">Peliculas</a>
+                  <a className={style.link} href="#">Peliculas</a>
                 </li>
               </ul>
             </div>
@@ -28,10 +28,10 @@ const Footer = () => {
               <h2 className={style.tituloh2}>Seguinos</h2>
               <ul>
                 <li>
-                  <a href="https://github.com/Vintuwu/PWA2024">Github</a>
+                  <a className={style.link} href="https://github.com/Vintuwu/PWA2024">Github</a>
                 </li>
                 <li>
-                  <a href="#">Discord</a>
+                  <a className={style.link} href="#">Discord</a>
                 </li>
               </ul>
             </div>
@@ -39,17 +39,17 @@ const Footer = () => {
               <h2 className={style.tituloh2}>Legal</h2>
               <ul>
                 <li>
-                  <a href="#">Politicas de Privacidad</a>
+                  <a className={style.link} href="#">Politicas de Privacidad</a>
                 </li>
                 <li>
-                  <a href="#">Terminos y Condiciones</a>
+                  <a className={style.link} href="#">Terminos y Condiciones</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
         <hr className="my-6 border-footer lg:my-8" />
-        <div className="sm:flex sm:items-center sm:justify-between">
+        <div className="sm:flex sm:items-center sm:justify-between max-w-screen-xl mx-auto">
           <span className="text-sm text-white">
             © 2023 <a href="#">Peliculas Argentinas</a>. Todos los Derechos
             Reservados.
