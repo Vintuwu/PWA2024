@@ -4,22 +4,26 @@ import style from "./SearchBar.module.css";
 const SearchBar = ({ onInputChange }) => {
   const [mostrarInput, setMostrarInput] = useState(false);
 
+  // Mostrar el input con un click
   const handleIconClick = () => {
     setMostrarInput(true);
   };
 
+  // Cerrar el buscador cuando aprete escape
   const handleEscKey = (event) => {
     if (event.key === "Escape") {
       setMostrarInput(false);
     }
   };
 
-  // set de valueInputBuscador
+  // Set de valueInputBuscador
   const [valueInputBuscador, setValueInputBuscador] = useState("");
   const onChangeHandlerBuscador = (event) => {
     setValueInputBuscador(event.target.value);
     onInputChange(event.target.value);
   };
+
+  // Espera que aprete escape para cerrar el buscador
   document.addEventListener("keydown", handleEscKey);
 
   return (

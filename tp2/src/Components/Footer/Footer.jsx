@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="md:flex md:justify-between mx-auto max-w-screen-xl">
           <div className="mb-6 md:mb-0">
             <a className={style.link} href="#">
-              <img src={movieIcon} className="h-8 me-3" alt="" />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
+              <img src={movieIcon} className="h-8 mx-auto" alt="" />
+              <span className="self-center text-2xl font-semibold whitespace-nowrap text-gray-50 hover:text-gray-300">
                 Peliculas Argentinas
               </span>
             </a>
@@ -25,7 +25,7 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className={style.tituloh2}>Seguinos</h2>
+              <h2 className={style.tituloh2}>Síguenos</h2>
               <ul>
                 <li>
                   <a className={style.link} href="https://github.com/Vintuwu/PWA2024">Github</a>
@@ -50,8 +50,8 @@ const Footer = () => {
         </div>
         <hr className="my-6 border-footer lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between max-w-screen-xl mx-auto">
-          <span className="text-sm text-white">
-            © 2023 <a href="#">Peliculas Argentinas</a>. Todos los Derechos
+          <span className="text-sm text-gray-50">
+            © 2024 <a href="/" className="text-gray-300 hover:text-gray-500">Peliculas Argentinas</a>. Todos los Derechos
             Reservados.
           </span>
           <div className={style.svgcontainer}>
