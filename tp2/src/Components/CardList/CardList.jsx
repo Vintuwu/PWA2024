@@ -37,6 +37,7 @@ const CardList = ({ searchTerm }) => {
   }
 
   if (filteredMovies.length === 0) {
+    // Si no hay películas que coincidan con la cadena de busqueda se devuelve el mensaje
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="flex flex-col items-center justify-center text-lg">
@@ -63,6 +64,7 @@ const CardList = ({ searchTerm }) => {
       </div>
     );
   }
+  // Se devuelve la lista de peliculas, ya sea filtrada por la cadena de busqueda o no
   return (
     <div className={style.card_list}>
       {filteredMovies.map((movie, index) => (

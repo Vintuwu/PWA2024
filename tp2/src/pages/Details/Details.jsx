@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
 import style from "./Details.module.css";
 import React, { useState, useEffect } from "react";
+
 const Details = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
-
+  // Búsqueda del json que contenga la información de la pelicula con el id obtenido
   useEffect(() => {
     const fetchMovie = async () => {
       try {
@@ -18,7 +19,7 @@ const Details = () => {
 
     fetchMovie();
   }, [id]);
-
+  // Si no se encontró la pelicula con el id obtenido se devuelve un mensaje
   if (!movie) {
     return (
       <div className="min-h-screen flex min-w-screen">
@@ -28,18 +29,22 @@ const Details = () => {
       </div>
     );
   }
+  // Se devuelen los detalles completos de la película encontrada
   return (
     <div className={style.contenedor}>
+      {/** Imagen de la película */}
       <img
         src={movie.Poster}
         alt={movie.Title}
         className={style.imagen}
       />
       <div className={style.contenedor_textos}>
+        {/** Título y año de la película */}
         <p className="text-4xl mb-4 font-bold leading-relaxed text-gray-100">
           {movie.Title} ({movie.Year})
         </p>
         <hr className="h-px mb-4 bg-gray-500 border-0"></hr>
+        {/** Detalles completos de la película */}
         <p>{movie.Plot}</p>
         <div className="mt-auto gap-2 flex flex-col">
           <p>

@@ -1,0 +1,15 @@
+.card {
+    @apply flex rounded-xl shadow-xl hover:shadow-indigo-600/20 bg-neutral-800 duration-300 hover:-translate-y-2 overflow-hidden;
+}
+.poster {
+    @apply h-4/6 w-full object-cover;
+}
+.contenedor_detalles {
+    @apply p-4 relative h-2/6;
+}
+.titulo {
+    @apply text-2xl mb-2 font-bold leading-relaxed text-neutral-200;
+}
+.burbuja_genero {
+    @apply inline-block bg-neutral-200 rounded-full px-3 py-1 font-semibold text-neutral-800 mr-2 mb-2;
+}
